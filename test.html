@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' /> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet'/>
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/test.css">
+
+    <title>TEST</title>
+</head>
+
+<body >
+
+<div class="container-fluid">
+    <div style="margin-left: 20px" class="row">
+        <div class="col-4">
+            <p></p><br>
+            <h1><strong> CONTACTS</strong></h1> <br>
+            <h4>GMS Headquarters</h4><br>
+            <h6>Global Message Services Ukraine LLC</h6><br>
+            <h6>Bundesstrasse 5 / 3rd floor</h6><br>
+            <h6>6300 Zug</h6><br>
+            <h6>Switzerland</h6><br>
+         <h4>+41 41 544 62 00</h4>
+        </div>
+
+        <div id="second" class="col-4"n
+            <p><br></p>
+            <p></p><br>
+            <p></p><br>
+            <p></p><br>
+            <h6>Email</h6><br>
+            <h6><a href="mailto:INFO@GMS-WORLDWIDE.COM"><strong>INFO@GMS-WORLDWIDE.COM</strong></a></h6><br>
+            <h6>Send messege</h6><br>
+            <h6><a href=viber://pa?chatURI=<URI><strong>VIBER US</strong></a></h6> <br>
+            <h6>Send form<br>
+            <h6><a href="#jakor" data-form-anchor="#contact_form"><strong>CONTACT US</strong></h6></a> 
+        </div>
+
+        <div id="thu" class="col-4">
+            <p></p><br>
+            <p></p><br>
+            <p></p><br>
+            <p></p><br>
+            <h3><strong> Technical support 24/7</strong></h3><br>
+            <h6>GMS understand that it can be hard to follow all new technologies.We regularly
+            provide for all our clients educational traning to make your operator's business
+            earn more and better though our best practices.</h6><br><br>
+            <h4>+41 41 544 6200</h4>
+        </div>
+
+    </div>
+   <div class="tabs">
+        <div style="width: 50%;background: dimgrey;height: 430px;float: left;color: white;margin: 0 auto"><br><br>
+            <h2 style="margin-left: 10%; margin-bottom:5% !important" >Our Offices</h2>
+            <div style="margin-left: 2% !important" >
+
+         <ul class="nav nav-pills nav-justified" data-toggle="pill" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link" id="Kyiv" href="#Kyiv" onclick="clickTab(this)" role="tab" data-toggle="tab" aria-controls="Kyiv"aria-selected="true" >Kyiv</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link "  id="new-york" href="#new-york" role="tab" onclick="clickTab(this)" data-toggle="tab" aria-controls="new-york"aria-selected="falce" >New York</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " id="barcelona" href="#barcelona" onclick="clickTab(this)" role="tab" data-toggle="tab"aria-controls="barcelona" aria-selected="falce"  >Barcelona</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " id="rome" href="#rome" data-toggle="tab"aria-controls="rome" onclick="clickTab(this)" aria-selected="falce" >Rome</a>
+  </li>
+</ul>
+<br>
+<br>
+
+ <div class="tab-content" id="content">
+
+
+
+  <div class="tab-pane active" id="mytabe-info" role="tabpanel" aria-labelledby="Kyiv-tab">
+    <h2 style="margin-left: 5%;margin-bottom:5% !important">Global Message Services Ukraine LLC</h2>
+             <p style="margin-left: 10%">Kyiv, Stepan Bandera,33</p>
+             <p style="margin-left: 10%">02066</p>
+             <p style="margin-left: 10%">Ukraine</p>
+       </div>
+
+
+  <div class="tab-pane" id="new-info" role="tabpanel" aria-labelledby="new-york-tab">
+    <h2 style="margin-left: 5%;margin-bottom:5% !important">Global Message Services USA LLC</h2>
+             <p style="margin-left: 10%">New York, shtrase ,33</p>
+             <p style="margin-left: 10%">66666</p>
+             <p style="margin-left: 10%">USA</p></div>
+
+
+  <div class="tab-pane" id="barc-info" role="tabpanel" aria-labelledby="barcelona-tab">
+
+    <h2 style="margin-left: 5%;margin-bottom:5% !important">Global Message Services Spain LLC</h2>
+             <p style="margin-left: 10%">Barcelona, druga,33</p>
+             <p style="margin-left: 10%">77777</p>
+             <p style="margin-left: 10%">Spain</p>
+
+  </div>
+
+
+
+
+  <div class="tab-pane" id="rome-info" role="tabpanel" aria-labelledby="rom-tab">
+  <h2 style="margin-left: 5%;margin-bottom:5% !important">Global Message Services Italy LLC</h2>
+             <p style="margin-left: 10%">Rome, buharest,33</p>
+             <p style="margin-left: 10%">88888</p>
+             <p style="margin-left: 10%">Italy</p></div>
+</div>
+
+        
+         </div>
+        
+            
+         </div>
+
+         <div id='map' style='width: 50%; height: 430px;'></div>
+         <pre id='coordinates' class='coordinates'></pre>
+
+   </div>
+
+
+   <form class="contact_form" id="ajax_form" action="" method="post"  name="contact_form">
+    <div class="form-group" id="foot">
+    <ul>
+     <li>
+        <a id="jakor"></a>
+        <h2  style="margin-left:150px">Contact Us</h2>
+        <span class="required_notification"></span>
+    </li>
+    <li>
+        <label for="name">Name:</label>
+        <input class="form-control" id="name" style=" width: 400px" type="text" name="name" placeholder="please enter your name"required/>
+    </li>
+    </ul>
+    <ul>
+<li>
+ <label for="email">Email:</label>
+ <input class="form-control" id="email" style=" width: 400px" type="email" name="email" placeholder="email format" required />
+ <span class="form_hint">Proper format email</span>
+</li>
+</ul>
+
+<ul>
+<li>
+ <label for="tel">Phone</label>
+ <input class="form-control" id="phone" style=" width: 400px" type="text" name="phone" placeholder="please enter your number phone" required/ />
+ <span class="form_hint">Proper format "+380638802882"</span>
+</li>
+</ul>
+
+
+
+<div class="check">
+    <input type="hidden" name="agree" value="0">
+    <input type="checkbox" id="check1" name="agree" value="1" required="">
+    <label onclick="$('#check1').prop('checked',!($('#check1').prop('checked')))" style=" width: 400px" class="check1" for="agree"> I agree to the Terms and Conditions of processing personal data <a href="/secur"></a></label>
+
+        <div class="help-block"></div></div><br>
+        <br>
+        <br>
+
+
+
+
+<ul>
+<li>
+ <button class="submit" id="btn" type="submit" value="text" >Get in tach</button>
+</li>
+</ul>
+
+</div>
+</form>
+
+
+<div id="result_form"></div> 
+
+</div>
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+
+<script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/test.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

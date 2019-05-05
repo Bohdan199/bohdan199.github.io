@@ -1,0 +1,43 @@
+form {
+  > div {
+ 
+    > input[type=”text”],
+    > input[type=”email”],
+    > input[type=”password”] {
+ 
+      // Когда поле ввода…
+      // 1. НЕ пустое
+      // 2. НЕ в фокусе
+      // 3. НЕ валидно
+      &:invalid:not(:focus):not(:placeholder-shown) {
+        // Покажем напоминание
+        background: pink;
+        & + label {
+          opacity: 0;
+        }
+      }
+ 
+    // Когда в невалидное поле устанавливается фокус (и оно по прежнему не пустое)
+    &:invalid:focus:not(:placeholder-shown) {
+      // Покажем более настойчивое напоминание 
+      & ~ .requirements {
+        max-height: 200px;
+        padding: 0 30px 20px 50px;
+      }
+    }
+  }
+ 
+  // <input> ~
+  // <label> ~ 
+  // <div class=”requirements”>
+  .requirements {
+    padding: 0 30px 0 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+  }
+ }
+}
